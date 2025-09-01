@@ -1,2 +1,0 @@
-# This file is not needed for Python packages
-# Python packages should be in requirements.txt
