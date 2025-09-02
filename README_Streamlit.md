@@ -38,6 +38,14 @@ python run_streamlit.py
 # Install dependencies
 pip install -r requirements_streamlit.txt
 
+# (Optional) Configure SMTP for email verification via .env
+# Create a file named .env in the project root with these keys:
+# SMTP_HOST=smtp.gmail.com
+# SMTP_PORT=587
+# SMTP_USER=youraddress@gmail.com
+# SMTP_PASSWORD=your_app_password
+# SMTP_FROM=youraddress@gmail.com
+
 # Run the app
 streamlit run streamlit_app.py
 ```
