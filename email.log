@@ -1,0 +1,10 @@
+2025-09-02T10:17:20.449719	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=Missing SMTP env
+2025-09-02T10:18:32.475906	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=Missing SMTP env
+2025-09-02T10:20:54.456873	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=Missing SMTP env
+2025-09-02T10:27:30.993932	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=Missing SMTP env
+2025-09-02T10:33:51.004700	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7724284fa02sm9212121b3a.102 - gsmtp')
+2025-09-02T10:43:03.897958	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 98e67ed59e1d1-3276f5a0bf9sm19720342a91.13 - gsmtp')
+2025-09-02T10:44:56.050967	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d2e1a72fcca58-7723427c127sm11888097b3a.62 - gsmtp')
+2025-09-02T10:46:25.971956	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=True	detail=Resend 200 {"id":"2dc46125-7fe1-4e37-8158-7f08e47af7f8"}
+2025-09-02T10:58:23.620727	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=False	detail=(535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials d9443c01a7336-24b13613f5dsm18202815ad.16 - gsmtp')
+2025-09-02T11:00:13.168965	to=niroopp2003@gmail.com	subject=Verify your Student Marks Analyzer account	success=True	detail=Resend 200 {"id":"f155ad78-d4a6-4298-95c9-73e9f9f14113"}

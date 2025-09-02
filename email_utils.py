@@ -22,7 +22,7 @@ def send_verification_email(to_email: str, username: str, token: str) -> bool:
         load_dotenv()
     except Exception:
         pass
-    # Prefer Resend API if configured
+    # Prefer Resend if configured
     api_key = os.getenv("RESEND_API_KEY")
     if api_key:
         try:
@@ -38,16 +38,16 @@ def send_verification_email(to_email: str, username: str, token: str) -> bool:
                     "subject": "Verify your Student Marks Analyzer account",
                     "text": f"Hi {username},\n\nYour verification code is: {token}\n\nEnter this code in the app to verify your email.",
                 },
-                timeout=20,
+                timeout=15,
             )
             ok = 200 <= resp.status_code < 300
-            _log_email_attempt(to_email, "Verify your Student Marks Analyzer account", ok, detail=f"Resend {resp.status_code} {resp.text[:120]}")
+            _log_email_attempt(to_email, "Verify your Student Marks Analyzer account", ok, detail=f"Resend {resp.status_code} {resp.text[:200]}")
             return ok
         except Exception as e:
             _log_email_attempt(to_email, "Verify your Student Marks Analyzer account", False, detail=f"Resend error: {e}")
-            # fallthrough to SMTP
+            # fall through to SMTP
 
-    # SMTP fallback
+    # Fall back to SMTP if Resend not configured or failed
     host = os.getenv("SMTP_HOST")
     port = int(os.getenv("SMTP_PORT", "587"))
     user = os.getenv("SMTP_USER")
@@ -55,7 +55,7 @@ def send_verification_email(to_email: str, username: str, token: str) -> bool:
     from_email = os.getenv("SMTP_FROM", user or "noreply@example.com")
 
     if not host or not user or not password:
-        _log_email_attempt(to_email, "Verify your Student Marks Analyzer account", False, "Missing SMTP env and Resend failed/unset")
+        _log_email_attempt(to_email, "Verify your Student Marks Analyzer account", False, "No email provider configured")
         return False
 
     subject = "Verify your Student Marks Analyzer account"
